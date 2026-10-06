@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Youth soccer profile and highlights for Luka Epaminondas Kaniaris of Aventura Premier Club in Miami, Florida." />
+  <title>Luka Kaniaris | Soccer Profile</title>
+  <style>
+    :root{
+      --bg:#07110d;
+      --panel:#0d1d15;
+      --panel2:#10261b;
+      --text:#f5fff8;
+      --muted:#b9c9bf;
+      --accent:#80ff9d;
+      --accent2:#2de46a;
+      --line:rgba(255,255,255,.10);
+      --danger:#ff7a7a;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 85% 5%, rgba(45,228,106,.18), transparent 28rem),
+        radial-gradient(circle at 10% 30%, rgba(128,255,157,.08), transparent 24rem),
+        var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:inherit;text-decoration:none}
+    button,input{font:inherit}
+    button{cursor:pointer}
+    .wrap{width:min(1120px,92%);margin:auto}
+    nav{
+      position:sticky;top:0;z-index:20;
+      background:rgba(7,17,13,.78);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px;
+    }
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.4px}
+    .mark{
+      width:42px;height:42px;border-radius:14px;
+      display:grid;place-items:center;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      color:#041009;font-weight:1000;
+      box-shadow:0 10px 30px rgba(45,228,106,.22);
+    }
+    .links{display:flex;gap:18px;color:var(--muted);font-weight:700;font-size:.95rem}
+    .links a:hover{color:var(--text)}
+    header{padding:92px 0 62px}
+    .hero{
+      display:grid;grid-template-columns:1.25fr .75fr;gap:36px;align-items:center;
+    }
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      color:#caffd6;background:rgba(45,228,106,.10);
+      border:1px solid rgba(128,255,157,.24);
+      padding:8px 12px;border-radius:999px;font-weight:800;font-size:.9rem;
+    }
+    h1{
+      font-size:clamp(3rem,8vw,6.5rem);
+      line-height:.92;margin:22px 0 22px;
+      letter-spacing:-.055em;
+    }
+    .hero p{font-size:1.18rem;color:var(--muted);max-width:720px}
+    .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:13px 18px;border-radius:13px;font-weight:900;
+      border:1px solid var(--line);transition:.2s transform,.2s background;
+      background:rgba(255,255,255,.03);color:var(--text);
+    }
+    .btn.primary{background:var(--accent);color:#051008;border-color:transparent}
+    .btn.secondary{background:rgba(255,255,255,.03)}
+    .btn:hover{transform:translateY(-2px)}
+    .btn.disabled{opacity:.45;pointer-events:none}
+    .player-card{
+      min-height:420px;border-radius:34px;padding:28px;
+      position:relative;overflow:hidden;border:1px solid var(--line);
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01)),
+        linear-gradient(140deg,#163c27,#0b1912 55%,#102f20);
+      box-shadow:0 30px 80px rgba(0,0,0,.35);
+    }
+    .player-card:before,.player-card:after{
+      content:"";position:absolute;border:2px solid rgba(255,255,255,.14);border-radius:50%;
+    }
+    .player-card:before{width:240px;height:240px;right:-80px;bottom:-60px}
+    .player-card:after{width:70px;height:70px;right:36px;bottom:22px}
+    .number{
+      font-size:8rem;line-height:1;font-weight:1000;letter-spacing:-.08em;
+      color:rgba(128,255,157,.20);
+      position:absolute;right:22px;top:16px;
+    }
+    .monogram{
+      width:120px;height:120px;border-radius:30px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      color:#041009;display:grid;place-items:center;
+      font-size:2.9rem;font-weight:1000;letter-spacing:-.08em;
+      position:absolute;left:28px;bottom:28px;
+      box-shadow:0 18px 50px rgba(45,228,106,.20);
+    }
+    .card-label{
+      position:absolute;left:28px;top:28px;
+      color:#d6ffe0;font-size:.86rem;text-transform:uppercase;letter-spacing:.16em;font-weight:900;
+    }
+    section{padding:58px 0}
+    .section-title{font-size:clamp(2rem,4vw,3.2rem);margin:0 0 10px;letter-spacing:-.04em}
+    .section-copy{color:var(--muted);max-width:760px;margin:0 0 28px}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .stat,.info-card,.video-card{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.025);
+      border-radius:22px;padding:22px;
+    }
+    .stat .big{font-size:1.9rem;font-weight:1000;color:var(--accent);line-height:1.1}
+    .stat .small{margin-top:8px;color:var(--muted);font-weight:700}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .positions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .chip{
+      border:1px solid rgba(128,255,157,.28);
+      background:rgba(128,255,157,.08);
+      color:#dfffe7;padding:9px 12px;border-radius:999px;font-weight:900;
+    }
+    .strengths{display:grid;gap:12px;margin-top:18px}
+    .strength{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+      padding:14px 0;border-bottom:1px solid var(--line);
+    }
+    .strength:last-child{border-bottom:0}
+    .bar{height:8px;background:rgba(255,255,255,.08);border-radius:99px;overflow:hidden;flex:0 0 42%}
+    .fill{height:100%;background:linear-gradient(90deg,var(--accent2),var(--accent));border-radius:inherit}
+    .quote{
+      font-size:clamp(1.6rem,3vw,2.5rem);font-weight:900;line-height:1.25;
+      letter-spacing:-.03em;max-width:900px;
+    }
+
+    /* Highlights */
+    .highlight-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .video-card{padding:14px;overflow:hidden}
+    .video-wrap{
+      width:100%;aspect-ratio:16/9;background:#020604;border-radius:14px;overflow:hidden;
+      display:grid;place-items:center;
+    }
+    .video-wrap video,.video-wrap iframe{width:100%;height:100%;border:0;display:block;object-fit:contain}
+    .video-title{font-size:1rem;font-weight:900;margin:12px 4px 3px}
+    .video-type{font-size:.83rem;color:var(--muted);margin:0 4px 3px}
+    .empty{
+      border:1px dashed rgba(128,255,157,.35);background:rgba(128,255,157,.04);
+      border-radius:22px;padding:34px;text-align:center;color:var(--muted);
+    }
+    .empty strong{display:block;color:var(--text);font-size:1.2rem;margin-bottom:4px}
+
+    /* Contact */
+    .contact-card{
+      display:flex;align-items:center;justify-content:space-between;gap:24px;
+      border:1px solid var(--line);border-radius:26px;padding:28px;
+      background:linear-gradient(135deg,rgba(128,255,157,.08),rgba(255,255,255,.02));
+    }
+    .contact-card h3{font-size:1.8rem;margin:0 0 4px;letter-spacing:-.03em}
+    .contact-card p{margin:0;color:var(--muted)}
+    .contact-status{font-size:.83rem;color:#a9b9ae;margin-top:8px}
+
+    /* Editor */
+    .editor-launch{
+      position:fixed;right:18px;bottom:18px;z-index:40;
+      border:1px solid rgba(128,255,157,.35);background:#12251a;color:var(--text);
+      padding:11px 14px;border-radius:999px;font-weight:900;box-shadow:0 12px 38px rgba(0,0,0,.35);
+    }
+    .modal-backdrop{
+      position:fixed;inset:0;background:rgba(0,0,0,.72);display:none;
+      align-items:flex-end;justify-content:center;z-index:100;padding:16px;
+    }
+    .modal-backdrop.open{display:flex}
+    .editor{
+      width:min(760px,100%);max-height:92vh;overflow:auto;
+      background:#0c1812;border:1px solid var(--line);border-radius:28px;padding:24px;
+      box-shadow:0 30px 90px rgba(0,0,0,.6);
+    }
+    .editor-head{display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:16px}
+    .editor-head h2{margin:0;letter-spacing:-.03em}
+    .close{
+      width:38px;height:38px;border-radius:50%;border:1px solid var(--line);
+      background:rgba(255,255,255,.04);color:var(--text);font-size:1.1rem;
+    }
+    .field{margin:16px 0}
+    label{display:block;font-weight:900;margin-bottom:7px}
+    input[type="email"],input[type="text"],input[type="url"],input[type="file"]{
+      width:100%;border-radius:12px;border:1px solid var(--line);background:#07110d;
+      color:var(--text);padding:12px 13px;
+    }
+    input[type="file"]{padding:10px}
+    .helper{font-size:.84rem;color:var(--muted);margin-top:6px}
+    .editor-divider{height:1px;background:var(--line);margin:22px 0}
+    .editor-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .editor .btn.danger{border-color:rgba(255,122,122,.25);color:#ffd0d0}
+    .queue{display:grid;gap:8px;margin-top:12px}
+    .queue-item{
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
+      border:1px solid var(--line);border-radius:12px;padding:9px 11px;color:var(--muted);
+    }
+    .queue-item strong{color:var(--text);font-size:.9rem}
+    .mini-btn{border:0;background:transparent;color:#ffb4b4;font-weight:900}
+    .save-note{font-size:.82rem;color:#9fb1a5;margin-top:10px}
+    footer{border-top:1px solid var(--line);padding:30px 0 44px;color:var(--muted);font-size:.92rem}
+    .note{font-size:.86rem;color:#93a89b;margin-top:12px}
+    @media (max-width:850px){
+      .hero,.two-col{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .highlight-grid{grid-template-columns:1fr}
+      .player-card{min-height:330px}
+      .links{display:none}
+      header{padding-top:58px}
+      .contact-card{align-items:flex-start;flex-direction:column}
+    }
+    @media (max-width:520px){
+      .grid{grid-template-columns:1fr}
+      .cta-row{display:grid}
+      .cta-row .btn{width:100%}
+      .editor-actions{display:grid}
+      .editor-actions .btn{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <script type="application/json" id="site-data">{"email":"luka81715@gmail.com","highlights":[]}</script>
+
+  <nav>
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top"><span class="mark">LK</span><span>Luka Kaniaris</span></a>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#positions">Positions</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="top">
+    <div class="wrap hero">
+      <div>
+        <div class="eyebrow">⚽ Youth Soccer Profile · Miami, Florida</div>
+        <h1>LUKA<br>KANIARIS</h1>
+        <p>
+          Versatile youth soccer player for <strong>Aventura Premier Club</strong>.
+          Comfortable across attacking and defensive roles, with a game built around
+          speed, physical play, and confident shooting.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="#highlights">▶ Watch Highlights</a>
+          <a class="btn secondary email-link disabled" href="#" aria-disabled="true">✉ Email Contact</a>
+        </div>
+      </div>
+
+      <div class="player-card" aria-label="Luka Kaniaris profile card">
+        <div class="card-label">Aventura Premier Club</div>
+        <div class="number">10</div>
+        <div class="monogram">LK</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="wrap">
+        <h2 class="section-title">Player Profile</h2>
+        <p class="section-copy">
+          Luka Epaminondas Kaniaris is a youth soccer player from the Miami, Florida area.
+          He plays for Aventura Premier Club and can contribute in multiple positions on the field.
+        </p>
+
+        <div class="grid">
+          <div class="stat">
+            <div class="big">Miami, FL</div>
+            <div class="small">Home Area</div>
+          </div>
+          <div class="stat">
+            <div class="big">APC</div>
+            <div class="small">Aventura Premier Club</div>
+          </div>
+          <div class="stat">
+            <div class="big">4</div>
+            <div class="small">Listed Positions</div>
+          </div>
+          <div class="stat">
+            <div class="big">2-Way</div>
+            <div class="small">Attack + Defense</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="positions">
+      <div class="wrap two-col">
+        <div class="info-card">
+          <h2 class="section-title">Positions</h2>
+          <p class="section-copy">A flexible player who can be used across the field.</p>
+          <div class="positions">
+            <span class="chip">Right Wing-Back</span>
+            <span class="chip">Left Wing</span>
+            <span class="chip">Right Wing</span>
+            <span class="chip">Striker</span>
+          </div>
+        </div>
+
+        <div class="info-card" id="strengths">
+          <h2 class="section-title">Strengths</h2>
+          <div class="strengths">
+            <div class="strength">
+              <strong>Speed</strong>
+              <div class="bar"><div class="fill" style="width:94%"></div></div>
+            </div>
+            <div class="strength">
+              <strong>Physical Play</strong>
+              <div class="bar"><div class="fill" style="width:90%"></div></div>
+            </div>
+            <div class="strength">
+              <strong>Shooting</strong>
+              <div class="bar"><div class="fill" style="width:92%"></div></div>
+            </div>
+            <div class="strength">
+              <strong>Versatility</strong>
+              <div class="bar"><div class="fill" style="width:96%"></div></div>
+            </div>
+          </div>
+          <p class="note">Visual bars are for presentation only and are not official performance ratings.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="highlights">
+      <div class="wrap">
+        <h2 class="section-title">Highlights</h2>
+        <p class="section-copy">
+          Match clips and soccer highlights can be added directly from the profile editor.
+        </p>
+        <div id="highlight-list" class="highlight-grid"></div>
+        <div id="highlight-empty" class="empty">
+          <strong>No highlights added yet.</strong>
+          Use the “Manage Profile” button to upload a video clip or add a YouTube link.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="info-card">
+          <div class="quote">
+            Fast. Physical. Versatile. Ready to make an impact wherever the team needs him.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact-card">
+          <div>
+            <h3>Interested in contacting Luka’s family?</h3>
+            <p>Use the email button to get in touch about soccer opportunities.</p>
+            <div id="contact-status" class="contact-status">Email: <a href="mailto:luka81715@gmail.com">luka81715@gmail.com</a></div>
+          </div>
+          <a class="btn primary email-link disabled" href="#" aria-disabled="true">✉ Email Contact</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <strong>Luka Kaniaris Soccer Profile</strong><br>
+      Public-facing youth sports profile. Exact birth date, school, home address, and phone number are intentionally not included.
+    </div>
+  </footer>
+
+  <button class="editor-launch" id="editor-launch">⚙ Manage Profile</button>
+
+  <div class="modal-backdrop" id="modal">
+    <div class="editor">
+      <div class="editor-head">
+        <div>
+          <h2>Manage Profile</h2>
+          <div class="helper">Add your contact email and soccer highlights, then export the updated website.</div>
+        </div>
+        <button class="close" id="close-editor" aria-label="Close editor">✕</button>
+      </div>
+
+      <div class="field">
+        <label for="email-input">Public contact email</label>
+        <input id="email-input" type="email" placeholder="example@email.com" autocomplete="email" />
+        <div class="helper">This is the address visitors will open when they tap “Email Contact.”</div>
+      </div>
+
+      <div class="editor-divider"></div>
+
+      <div class="field">
+        <label for="video-title">Highlight title</label>
+        <input id="video-title" type="text" placeholder="Example: Goal vs. Opponent" maxlength="80" />
+      </div>
+
+      <div class="field">
+        <label for="video-file">Upload a video clip</label>
+        <input id="video-file" type="file" accept="video/*" />
+        <div class="helper">Best for short clips. The video will be embedded into the exported HTML file so viewers can watch it.</div>
+      </div>
+
+      <div class="editor-actions">
+        <button class="btn primary" id="add-file">＋ Add Uploaded Clip</button>
+      </div>
+
+      <div class="editor-divider"></div>
+
+      <div class="field">
+        <label for="youtube-url">Or add a YouTube highlight</label>
+        <input id="youtube-url" type="url" placeholder="https://www.youtube.com/watch?v=..." />
+        <div class="helper">Public or unlisted YouTube links keep the website file much smaller.</div>
+      </div>
+
+      <div class="editor-actions">
+        <button class="btn secondary" id="add-youtube">＋ Add YouTube Video</button>
+      </div>
+
+      <div id="queue" class="queue"></div>
+
+      <div class="editor-divider"></div>
+
+      <div class="editor-actions">
+        <button class="btn primary" id="save-export">⬇ Save Updated Website</button>
+        <button class="btn danger" id="clear-highlights">Remove All Highlights</button>
+      </div>
+      <div class="save-note">
+        Important: after adding clips or changing the email, tap “Save Updated Website.” That creates a new copy of this same website with your changes built in.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const dataEl = document.getElementById('site-data');
+      let siteData;
+      try {
+        siteData = JSON.parse(dataEl.textContent || '{"email":"","highlights":[]}');
+      } catch {
+        siteData = { email: "", highlights: [] };
+      }
+      if (!Array.isArray(siteData.highlights)) siteData.highlights = [];
+      if (typeof siteData.email !== "string") siteData.email = "";
+
+      const list = document.getElementById('highlight-list');
+      const empty = document.getElementById('highlight-empty');
+      const emailInput = document.getElementById('email-input');
+      const queue = document.getElementById('queue');
+      const modal = document.getElementById('modal');
+      const titleInput = document.getElementById('video-title');
+      const fileInput = document.getElementById('video-file');
+      const ytInput = document.getElementById('youtube-url');
+
+      emailInput.value = siteData.email || "";
+
+      function esc(s) {
+        return String(s ?? "").replace(/[&<>"']/g, c => ({
+          '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'
+        }[c]));
+      }
+
+      function youtubeId(url) {
+        try {
+          const u = new URL(url);
+          if (u.hostname.includes('youtu.be')) return u.pathname.slice(1).split('/')[0];
+          if (u.hostname.includes('youtube.com')) {
+            if (u.pathname === '/watch') return u.searchParams.get('v');
+            const parts = u.pathname.split('/').filter(Boolean);
+            const idx = parts.findIndex(x => ['shorts','embed'].includes(x));
+            if (idx >= 0 && parts[idx+1]) return parts[idx+1];
+          }
+        } catch {}
+        return null;
+      }
+
+      function updateContact() {
+        const email = (siteData.email || "").trim();
+        document.querySelectorAll('.email-link').forEach(a => {
+          if (email) {
+            a.href = 'mailto:' + email + '?subject=Soccer%20Inquiry%20for%20Luka%20Kaniaris';
+            a.classList.remove('disabled');
+            a.removeAttribute('aria-disabled');
+          } else {
+            a.href = '#';
+            a.classList.add('disabled');
+            a.setAttribute('aria-disabled','true');
+          }
+        });
+        const status = document.getElementById('contact-status');
+        if (email) {
+          status.innerHTML = 'Email: <a href="mailto:' + email + '">' + email + '</a>';
+        } else {
+          status.textContent = 'Contact email has not been added yet.';
+        }
+      }
+
+      function renderHighlights() {
+        list.innerHTML = '';
+        empty.style.display = siteData.highlights.length ? 'none' : 'block';
+
+        siteData.highlights.forEach((item) => {
+          const card = document.createElement('article');
+          card.className = 'video-card';
+
+          const wrap = document.createElement('div');
+          wrap.className = 'video-wrap';
+
+          if (item.type === 'youtube') {
+            const iframe = document.createElement('iframe');
+            iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(item.id);
+            iframe.title = item.title || 'Soccer highlight';
+            iframe.loading = 'lazy';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+            iframe.allowFullscreen = true;
+            wrap.appendChild(iframe);
+          } else if (item.type === 'file' && item.src) {
+            const video = document.createElement('video');
+            video.controls = true;
+            video.playsInline = true;
+            video.preload = 'metadata';
+            video.src = item.src;
+            wrap.appendChild(video);
+          }
+
+          const h = document.createElement('div');
+          h.className = 'video-title';
+          h.textContent = item.title || 'Soccer Highlight';
+
+          const meta = document.createElement('div');
+          meta.className = 'video-type';
+          meta.textContent = item.type === 'youtube' ? 'YouTube highlight' : 'Uploaded video clip';
+
+          card.appendChild(wrap);
+          card.appendChild(h);
+          card.appendChild(meta);
+          list.appendChild(card);
+        });
+
+        renderQueue();
+        updateContact();
+      }
+
+      function renderQueue() {
+        queue.innerHTML = '';
+        siteData.highlights.forEach((item, i) => {
+          const row = document.createElement('div');
+          row.className = 'queue-item';
+          row.innerHTML = '<span><strong>' + esc(item.title || 'Soccer Highlight') + '</strong><br>' +
+                          (item.type === 'youtube' ? 'YouTube' : 'Uploaded clip') +
+                          '</span><button class="mini-btn" data-remove="' + i + '">Remove</button>';
+          queue.appendChild(row);
+        });
+        queue.querySelectorAll('[data-remove]').forEach(btn => {
+          btn.addEventListener('click', () => {
+            siteData.highlights.splice(Number(btn.dataset.remove), 1);
+            renderHighlights();
+          });
+        });
+      }
+
+      document.getElementById('editor-launch').addEventListener('click', () => {
+        modal.classList.add('open');
+      });
+      document.getElementById('close-editor').addEventListener('click', () => {
+        modal.classList.remove('open');
+      });
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.remove('open');
+      });
+
+      emailInput.addEventListener('input', () => {
+        siteData.email = emailInput.value.trim();
+        updateContact();
+      });
+
+      document.getElementById('add-file').addEventListener('click', () => {
+        const file = fileInput.files && fileInput.files[0];
+        if (!file) {
+          alert('Choose a video file first.');
+          return;
+        }
+        const title = titleInput.value.trim() || file.name.replace(/\.[^.]+$/, '') || 'Soccer Highlight';
+
+        const reader = new FileReader();
+        reader.onload = () => {
+          siteData.highlights.push({
+            type: 'file',
+            title,
+            src: reader.result
+          });
+          titleInput.value = '';
+          fileInput.value = '';
+          renderHighlights();
+          alert('Highlight added. Remember to tap “Save Updated Website” when you are done.');
+        };
+        reader.onerror = () => alert('That video could not be read. Try a different file.');
+        reader.readAsDataURL(file);
+      });
+
+      document.getElementById('add-youtube').addEventListener('click', () => {
+        const id = youtubeId(ytInput.value.trim());
+        if (!id) {
+          alert('Paste a valid YouTube or YouTube Shorts link.');
+          return;
+        }
+        const title = titleInput.value.trim() || 'Soccer Highlight';
+        siteData.highlights.push({ type:'youtube', title, id });
+        titleInput.value = '';
+        ytInput.value = '';
+        renderHighlights();
+      });
+
+      document.getElementById('clear-highlights').addEventListener('click', () => {
+        if (confirm('Remove every highlight from the website?')) {
+          siteData.highlights = [];
+          renderHighlights();
+        }
+      });
+
+      document.getElementById('save-export').addEventListener('click', () => {
+        siteData.email = emailInput.value.trim();
+        dataEl.textContent = JSON.stringify(siteData).replace(/</g, '\\u003c');
+
+        const clone = document.documentElement.cloneNode(true);
+        clone.querySelector('#modal')?.classList.remove('open');
+
+        const cloneData = clone.querySelector('#site-data');
+        if (cloneData) cloneData.textContent = JSON.stringify(siteData).replace(/</g, '\\u003c');
+
+        const html = '<!DOCTYPE html>\n' + clone.outerHTML;
+        const blob = new Blob([html], {type:'text/html;charset=utf-8'});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'luka-kaniaris-soccer-profile.html';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+      });
+
+      renderHighlights();
+    })();
+  </script>
+</body>
+</html>
